@@ -1,0 +1,181 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Creato il: Mag 29, 2023 alle 16:51
+-- Versione del server: 8.0.33
+-- Versione PHP: 8.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_second_university`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `courses`
+--
+
+CREATE TABLE `courses` (
+  `id` bigint UNSIGNED NOT NULL,
+  `degree_id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `period` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `year` tinyint UNSIGNED NOT NULL,
+  `cfu` tinyint UNSIGNED NOT NULL,
+  `website` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `courses`
+--
+
+INSERT INTO `courses` (`id`, `degree_id`, `name`, `description`, `period`, `year`, `cfu`, `website`) VALUES
+(6, 1, 'magnam quo iusto', 'Facilis velit et ut ullam et blanditiis rerum. Aut amet voluptatum iusto voluptatibus. Praesentium iure quaerat pariatur non. Recusandae sed eligendi impedit commodi sed quia.', 'I semestre', 2, 9, 'www.voluptas.uni.it'),
+(7, 1, 'voluptatem ullam atque', 'Velit quia quia velit ut in ut voluptatem ipsa. Optio id voluptates nobis similique a atque esse. Voluptatibus in magnam laboriosam sit. Maiores nostrum recusandae aut tempora.', 'I semestre', 2, 4, 'www.sequi.uni.it'),
+(8, 1, 'voluptatem eos ullam', 'Architecto atque quia cum in quam. Ut dignissimos necessitatibus sit. Explicabo consequatur suscipit sint architecto fuga tempore. Quam earum voluptates doloremque eum voluptatem ipsam.', 'I semestre', 2, 5, 'www.qui.uni.it'),
+(9, 1, 'quod in aut', 'Hic a suscipit illum excepturi deleniti. Est sunt animi ut doloremque incidunt. Atque ipsa ipsa incidunt sit dolor dolorum.', 'II semestre', 2, 13, 'www.sunt.uni.it'),
+(10, 1, 'natus dolores quod', 'Vel totam magni eveniet a aut. Voluptates consectetur incidunt at voluptas. Velit reprehenderit hic eos praesentium qui ratione eum modi.', 'II semestre', 2, 7, 'www.fugiat.uni.it'),
+(11, 1, 'beatae eveniet fugiat', 'Reprehenderit aut voluptatem aliquam et consequatur. Perferendis est aut earum ut quis a. Repellendus dolor qui est. Aut a quae mollitia.', 'II semestre', 2, 13, NULL),
+(28, 2, 'accusantium culpa sint', 'Quia autem dolor officia voluptatem ullam. Architecto deleniti ex ut ab et harum veritatis. Expedita facilis quo quidem quas eos praesentium sed voluptatum.', 'I semestre', 2, 12, 'www.pariatur.uni.it'),
+(29, 2, 'tempora voluptatum aut', 'Accusamus quo pariatur culpa molestiae optio similique illum. Cum sit dolor aliquid earum. Ut culpa tempora qui vel laudantium. Quia culpa velit sapiente dolor nam.', 'I semestre', 2, 14, 'www.nisi.uni.it'),
+(30, 2, 'aliquam aliquam et', 'Doloremque illum et nulla nisi ab officia dolorem ab. Quasi quam id ea aspernatur modi molestias officia aperiam. Velit sint dolorum et adipisci.', 'I semestre', 2, 15, NULL),
+(31, 2, 'atque assumenda explicabo', 'Ab assumenda illo odio. Molestiae neque eum quaerat odit voluptatibus. Voluptatem reiciendis quo ea asperiores quas molestias officiis. Tempore officia dolorem hic et repellat est.', 'I semestre', 2, 13, NULL),
+(32, 2, 'sed quis ad', 'Voluptatem tempore praesentium sed nobis consectetur. Quia fugit et tenetur ipsam. Et neque maxime ut et. Assumenda quidem voluptas aut ullam voluptates.', 'I semestre', 2, 7, NULL),
+(33, 2, 'rerum quod quibusdam', 'Delectus consequatur qui similique magnam et modi. Suscipit atque expedita quia qui. Est quia nesciunt et sunt minima.', 'II semestre', 2, 14, NULL),
+(34, 2, 'enim sapiente fuga', 'Dolor quaerat adipisci ut et magni rem fugiat sequi. Non voluptates cum suscipit perferendis consequuntur. Voluptas natus eos et quis odio. Sunt eum blanditiis ad qui culpa sint eius ut.', 'II semestre', 2, 3, NULL),
+(35, 2, 'aut consequatur sit', 'Eveniet voluptatem et voluptas. Dolore id doloribus ut aliquam exercitationem molestiae. Nisi perferendis rerum et dolorem libero est non aspernatur. Dicta provident et dignissimos explicabo facilis.', 'II semestre', 2, 3, NULL),
+(36, 2, 'nobis et labore', 'Dolores repudiandae omnis neque officia. Est accusamus dolor et est cum odit nemo qui. Laborum sit accusantium minima delectus inventore modi deleniti.', 'II semestre', 2, 3, 'www.ut.uni.it'),
+(54, 3, 'voluptatem vel beatae', 'Consequatur saepe quae unde perferendis mollitia in minus. Vitae odit provident nihil tempore id est. Ut expedita iusto error explicabo.', 'I semestre', 2, 9, NULL),
+(55, 3, 'sed sint non', 'Blanditiis ut quas quaerat rerum quo deserunt quia. Sit ullam earum suscipit quos. Amet magnam molestiae ut quaerat quaerat qui. Soluta minus totam placeat veniam aliquam quia nisi.', 'I semestre', 2, 8, 'www.rem.uni.it'),
+(56, 3, 'inventore maiores cumque', 'Aut quasi non alias alias consequuntur quibusdam velit. Illo sit ad libero molestiae nostrum et. Nihil rerum nam vel quam. Consequatur est est praesentium ad.', 'I semestre', 2, 4, NULL),
+(57, 3, 'veniam dolorum dolor', 'Id quo est est. Recusandae ipsam iure libero esse. Ut minima minima officiis ad velit commodi nihil quia.', 'II semestre', 2, 11, NULL),
+(58, 3, 'eaque sit impedit', 'Rem molestiae vel voluptatum ipsam sunt. Neque magnam ut delectus veritatis reprehenderit explicabo eveniet. Laudantium alias incidunt laboriosam beatae maxime maiores.', 'II semestre', 2, 9, 'www.culpa.uni.it'),
+(71, 4, 'tempore molestiae et', 'Rerum nihil aspernatur quidem autem autem. Fugit ducimus vitae dicta culpa atque deserunt voluptatum. A cupiditate qui et non est. Et sed dicta qui quae molestiae.', 'I semestre', 2, 14, NULL),
+(72, 4, 'molestiae est neque', 'Nemo laudantium ut nihil. Impedit sequi deleniti aliquam dolor commodi distinctio vitae. Labore earum odio et facere et eum consequuntur.', 'I semestre', 2, 11, 'www.facere.uni.it'),
+(73, 4, 'molestiae consectetur vero', 'Veniam veniam quis consequatur laudantium placeat sit a. Debitis quod quidem delectus tenetur voluptatem harum reprehenderit exercitationem. Incidunt et veritatis corporis harum.', 'I semestre', 2, 3, NULL),
+(74, 4, 'in dolorem sit', 'Maxime sequi ipsum veritatis illum. Odio deserunt quo voluptatem culpa et non impedit. Assumenda sed et consequatur praesentium debitis.', 'I semestre', 2, 3, 'www.doloribus.uni.it'),
+(75, 4, 'dignissimos esse rerum', 'Autem voluptate aliquid sed nostrum similique. Qui magnam quibusdam earum et sit reprehenderit. Repellat sed fuga placeat sit.', 'I semestre', 2, 4, NULL),
+(76, 4, 'qui eligendi non', 'Rerum eos maxime non id aut perferendis. Blanditiis ratione sint et aspernatur in aliquid. Saepe aut est hic dicta eos. Vero aut quia officiis corrupti.', 'II semestre', 2, 15, 'www.laudantium.uni.it'),
+(77, 4, 'dolorem laudantium minima', 'Omnis quidem vero tempora. Illo voluptas eligendi sunt fugiat. Eos eum adipisci alias aliquam. Numquam sit assumenda deserunt ex.', 'II semestre', 2, 11, NULL),
+(78, 4, 'voluptas ut sit', 'Quia ut veritatis ut eaque odit autem molestias. Consequatur et laudantium velit non repudiandae. Quo velit minima vitae nesciunt iusto.', 'II semestre', 2, 6, NULL),
+(79, 4, 'odit nulla minus', 'Eveniet error quia nobis incidunt id et ducimus. Ab sunt blanditiis voluptas similique tempora. Possimus enim laboriosam consequatur delectus quam. Illum quia sint eos ab.', 'II semestre', 2, 4, 'www.at.uni.it'),
+(94, 5, 'iusto consequatur ut', 'Rerum enim impedit nam et non quis saepe sapiente. Molestiae vel alias nesciunt rerum. Explicabo eius ullam aut. Blanditiis quia doloremque exercitationem voluptatem quibusdam ut.', 'I semestre', 2, 13, NULL),
+(95, 5, 'facilis vero voluptatem', 'Quas doloribus explicabo repellat nulla unde. Non necessitatibus vitae enim doloremque voluptatem voluptatem. Ipsam excepturi reprehenderit veniam expedita. Ea ut illo odit.', 'I semestre', 2, 12, NULL),
+(96, 5, 'ipsam amet recusandae', 'Ullam reiciendis aut aspernatur provident vitae quae mollitia. Sed ea quas atque sed. Doloremque dolor aut voluptates ad.', 'I semestre', 2, 12, NULL),
+(97, 5, 'quia doloribus nulla', 'Reiciendis sint autem numquam quo sunt. In nesciunt impedit voluptatem nam ea tenetur blanditiis. Illo inventore voluptates velit sit aut beatae ut. Fugit voluptatum esse repellat explicabo rerum.', 'II semestre', 2, 6, NULL),
+(98, 5, 'sunt omnis asperiores', 'Ut dicta expedita quasi maiores. Dolores qui quam eos explicabo. Voluptas tempora architecto sint at. Blanditiis pariatur dolorum totam eius in.', 'II semestre', 2, 12, NULL),
+(104, 6, 'ut nam cupiditate', 'Adipisci suscipit minus quam harum. Repellat laudantium nulla modi suscipit itaque maxime.', 'I semestre', 2, 13, 'www.quia.uni.it'),
+(105, 6, 'et totam eius', 'Et aut cupiditate molestiae consequatur dolor perferendis voluptatem. Neque quibusdam molestias deleniti magnam ipsum id.', 'I semestre', 2, 11, NULL),
+(106, 6, 'et harum laboriosam', 'Eum et voluptatem non beatae. Laborum neque eligendi repellendus. Nisi amet nihil odio itaque voluptatum sint perspiciatis. Veniam cupiditate quo sed tempora qui.', 'I semestre', 2, 12, 'www.aut.uni.it'),
+(107, 6, 'cupiditate voluptas consectetur', 'Autem dolorum est quia. Eos esse beatae dolorem eius. Non quia omnis molestiae perspiciatis. Quia voluptatem aut non necessitatibus non.', 'II semestre', 2, 4, 'www.quaerat.uni.it'),
+(108, 6, 'et qui voluptas', 'Expedita eum velit saepe officia. Dolores hic recusandae ut a aperiam voluptatum. Qui ea similique consequatur ratione iusto accusamus eaque.', 'II semestre', 2, 9, 'www.voluptates.uni.it'),
+(109, 6, 'laborum expedita ullam', 'Illo veritatis enim reprehenderit similique atque ut voluptas. Inventore dolor nihil quisquam. Ullam cupiditate esse qui molestiae provident sed veritatis qui.', 'II semestre', 2, 13, 'www.amet.uni.it'),
+(117, 7, 'optio corporis explicabo', 'Placeat minus nobis veritatis aut dolorem autem. Adipisci error occaecati optio. Enim vel sit id iste dolores. Tempore quia dolorem modi alias vel.', 'I semestre', 2, 13, NULL),
+(118, 7, 'consequatur omnis porro', 'Eius ipsa cumque et veniam a. Est veritatis eligendi aspernatur consequuntur quisquam est. Consequatur numquam consequatur eos rerum. Sit rerum aut velit aut exercitationem in.', 'I semestre', 2, 9, 'www.velit.uni.it'),
+(119, 7, 'corrupti doloribus molestiae', 'Laboriosam perspiciatis natus voluptatem. Qui optio necessitatibus vel molestiae. Facilis et neque iusto. Ut sunt ut quas aut asperiores eum id iste. Ipsum dolores sequi non voluptatem eos.', 'I semestre', 2, 4, NULL),
+(120, 7, 'porro optio odit', 'Exercitationem nihil quis sunt cupiditate. Est sed nesciunt asperiores similique quis sint. Quisquam libero aperiam consequatur nostrum.', 'I semestre', 2, 15, 'www.dolore.uni.it'),
+(121, 7, 'adipisci ea enim', 'Ea quia vitae id qui eveniet. Reprehenderit provident ut magnam autem sed consequuntur.', 'II semestre', 2, 14, 'www.est.uni.it'),
+(122, 7, 'autem recusandae doloremque', 'Saepe ut ea voluptatem odio sint fugiat at. Est illo nam blanditiis soluta ut maxime. Iste fugit deserunt voluptas.', 'II semestre', 2, 8, NULL),
+(123, 7, 'molestiae beatae est', 'Laudantium dolores porro voluptas dolorem est possimus incidunt. Et explicabo quae rerum. Quae doloremque ea sit sapiente dolorem.', 'II semestre', 2, 5, NULL),
+(131, 8, 'tenetur animi autem', 'Ut quam ex rerum doloribus doloremque iure. Et et sed nisi dolores praesentium facere rerum. Sequi explicabo impedit eius quisquam et ratione id.', 'I semestre', 2, 4, NULL),
+(132, 8, 'nulla nesciunt rerum', 'Facere voluptate omnis minima praesentium quam soluta. Quo eligendi a iusto placeat. Fugit ut sapiente architecto et sed perferendis nulla. Iste reprehenderit excepturi necessitatibus dolor eum.', 'I semestre', 2, 8, NULL),
+(133, 8, 'dolor eum et', 'Dolore ut dicta dolor consequatur. Sed nihil et totam perspiciatis. Delectus est aut sequi quam delectus molestiae. Vel quo minus aperiam commodi nihil.', 'I semestre', 2, 7, 'www.consequatur.uni.it'),
+(134, 8, 'magnam ullam doloribus', 'Voluptates mollitia itaque doloribus dolorum quis expedita exercitationem. Autem sint provident fugit pariatur. Et occaecati nobis deleniti magnam.', 'I semestre', 2, 13, 'www.consectetur.uni.it'),
+(135, 8, 'repellendus quis sed', 'Libero aut voluptate beatae totam aut aut. Consequatur facilis quia dignissimos sunt placeat accusamus. Ut voluptate aperiam distinctio.', 'II semestre', 2, 6, 'www.a.uni.it'),
+(136, 8, 'quo explicabo id', 'Soluta quo sint similique sunt sed minima. Ea quidem magnam assumenda iure iure optio in. Et rerum iste qui totam quo assumenda accusantium.', 'II semestre', 2, 6, 'www.eum.uni.it'),
+(137, 8, 'quam fugit accusantium', 'Aut nobis provident dolor. Quisquam nemo est rem sed nulla veniam. Ad qui laborum est. Et perferendis pariatur alias quia. Rerum eaque quidem in magni.', 'II semestre', 2, 8, 'www.omnis.uni.it'),
+(138, 8, 'magnam assumenda aut', 'Et laboriosam debitis ducimus rem et nihil saepe. Porro libero mollitia laborum. Autem animi quisquam et in non. Harum praesentium veritatis repellendus non ducimus voluptatum.', 'II semestre', 2, 10, 'www.tempore.uni.it'),
+(146, 9, 'assumenda et sed', 'Molestiae culpa sed voluptas tenetur. A nulla similique beatae. Sed eum asperiores in.', 'I semestre', 2, 11, 'www.expedita.uni.it'),
+(147, 9, 'sapiente quia accusantium', 'Aut perferendis similique sint velit perferendis aliquam qui. Autem occaecati velit soluta. Est exercitationem dolor dolores ducimus.', 'I semestre', 2, 11, NULL),
+(148, 9, 'a vero voluptatibus', 'Odit officiis animi quis similique qui rerum quos. Quisquam qui iure nihil rerum occaecati incidunt vel dicta. Velit nemo inventore deleniti ullam alias.', 'I semestre', 2, 11, 'www.aliquid.uni.it'),
+(149, 9, 'quod ut aliquid', 'Enim et aut sunt quas. Quidem ut a nesciunt repellendus sed. Occaecati modi voluptatem et omnis expedita ipsa. Quo aut eum voluptate voluptatem sit.', 'II semestre', 2, 13, NULL),
+(150, 9, 'eaque exercitationem non', 'Eaque quia itaque aliquam vitae nobis quas. Eius soluta et tempora officia reprehenderit id voluptatem. Rerum aut velit sed consequatur.', 'II semestre', 2, 11, NULL),
+(151, 9, 'sit quis inventore', 'Quo aut deleniti est est non. Officia quidem quos a sint voluptatem tempora. Veritatis pariatur qui laudantium pariatur.', 'II semestre', 2, 12, 'www.omnis.uni.it'),
+(161, 10, 'impedit sunt qui', 'Aut cum natus et iste et vero. Eos libero voluptates id earum autem recusandae. Dolore eum magnam quis ratione aspernatur maxime. Est et sit et ut id.', 'I semestre', 2, 11, 'www.magnam.uni.it'),
+(162, 10, 'enim quas sint', 'Corrupti accusantium consectetur consequatur laboriosam porro voluptas. Modi eius et corporis perspiciatis sed. Cumque quia ut vel minima.', 'I semestre', 2, 13, 'www.commodi.uni.it'),
+(163, 10, 'tenetur omnis amet', 'Molestiae repellat ut temporibus sint. Asperiores soluta harum architecto ut nihil maxime.', 'I semestre', 2, 3, NULL),
+(164, 10, 'illum rerum velit', 'Dicta repellendus qui sunt. Harum aliquam et deleniti et aut qui voluptas. Odio similique illum est voluptas eligendi quibusdam sit a. Recusandae possimus veritatis consectetur voluptatem.', 'I semestre', 2, 4, 'www.quisquam.uni.it'),
+(165, 10, 'odio est qui', 'Repellendus ex eveniet minima dolorum ut qui neque. Ad voluptate qui voluptas omnis dolor. Illum voluptas et aut vitae. Voluptate rerum praesentium eum quis eius non.', 'I semestre', 2, 10, NULL),
+(166, 10, 'quae quam non', 'Ratione aut iste necessitatibus. Quo debitis modi omnis quo provident incidunt. Nihil natus odio nulla aut dolorem suscipit consequatur.', 'II semestre', 2, 6, NULL),
+(167, 10, 'voluptatum repellendus rerum', 'Culpa dolores sit praesentium ipsum qui possimus. Modi ipsa ipsam facilis vitae. Consequuntur ad laboriosam laudantium. Et ut et repudiandae libero sed nostrum.', 'II semestre', 2, 6, NULL),
+(168, 10, 'ipsa dignissimos id', 'Aliquam perspiciatis officiis quaerat quia veritatis rerum amet. Facere excepturi qui omnis ab iusto tempore vel.', 'II semestre', 2, 7, NULL),
+(169, 10, 'provident mollitia saepe', 'Iusto mollitia eligendi tenetur doloribus. Aut rem ut in dolores et quia. Ratione in at voluptate magnam quaerat recusandae officia. Ipsam itaque eos et dolorum facere sint perspiciatis.', 'II semestre', 2, 11, 'www.et.uni.it'),
+(176, 11, 'sunt repellat et', 'Dolor et maxime nulla atque. Asperiores ad voluptatem ab eius. Et dolore optio aut ducimus est nihil. Ut atque sunt et voluptatibus et. Vel dolorum quia laborum at corporis sunt.', 'I semestre', 2, 7, NULL),
+(177, 11, 'maxime laboriosam quo', 'Rerum omnis voluptatem blanditiis ab voluptatibus qui iste. Id omnis voluptatem maxime. Explicabo aut nisi et quod. Hic qui dolorem unde illo.', 'I semestre', 2, 6, 'www.sapiente.uni.it'),
+(178, 11, 'quo similique autem', 'Quia voluptas soluta accusamus eos perferendis ullam sapiente quidem. Dolor mollitia omnis laboriosam corporis illo sunt autem. Laudantium reiciendis enim est. Nisi aut vel et earum.', 'I semestre', 2, 12, 'www.animi.uni.it'),
+(179, 11, 'provident ea molestiae', 'Amet dolores quia qui. Rerum eius totam quidem sequi incidunt ea. Aut culpa qui aperiam et. Qui expedita id ex nisi. Saepe et rem numquam qui aperiam.', 'II semestre', 2, 11, 'www.dolorum.uni.it'),
+(180, 11, 'et quibusdam libero', 'Quam ipsa culpa qui libero. Totam ratione alias excepturi necessitatibus voluptatem mollitia. Et molestiae rerum aliquam quidem voluptatem itaque illo.', 'II semestre', 2, 11, NULL),
+(181, 11, 'et possimus quae', 'Culpa aliquid aut repellendus. Ut deleniti dignissimos nobis nihil dolores. Culpa quo autem odio sequi quos. Ut voluptas repellendus sit eveniet ut.', 'II semestre', 2, 5, NULL),
+(195, 12, 'qui voluptatem iste', 'Ut architecto consequatur sunt ut. Saepe quia enim facilis perferendis qui dolor. Quam omnis natus saepe iusto in velit. Omnis iste dolorem tenetur reiciendis.', 'I semestre', 2, 4, NULL),
+(196, 12, 'quis pariatur voluptatem', 'Est dolore quasi et saepe numquam illum maxime. Provident eos est maiores impedit consequatur et vero illum. Et vel rerum aspernatur. Omnis in quos placeat accusamus alias.', 'I semestre', 2, 9, NULL),
+(197, 12, 'vel et aut', 'Est ipsum ad soluta nam. Aspernatur iure eum dolor asperiores animi magni. Qui hic id veniam iure voluptate ea. Ut accusantium aspernatur expedita sequi.', 'I semestre', 2, 11, NULL),
+(198, 12, 'omnis exercitationem ipsa', 'Quia et unde quod cum aut maxime cumque. Nam quibusdam nobis soluta odio. Quisquam velit doloremque consequatur voluptatem cumque.', 'I semestre', 2, 4, NULL),
+(199, 12, 'velit non sapiente', 'Quia aut aliquam voluptate. Earum fugit et at quia atque corrupti vero reprehenderit. Explicabo tempore et et fuga tempore facilis voluptatem recusandae. Quo veritatis voluptatum neque debitis.', 'II semestre', 2, 3, 'www.dolorem.uni.it'),
+(200, 12, 'similique qui sapiente', 'Voluptate reiciendis et beatae et iusto ad. Magni at eum mollitia sapiente. Totam quis reiciendis non dolorem sed.', 'II semestre', 2, 15, NULL),
+(201, 12, 'sit vero tempora', 'In dignissimos culpa deserunt nostrum reprehenderit. Optio rerum non aut officia ad maiores. Nulla aut dolor molestiae aut et qui. Incidunt et officia nemo incidunt earum.', 'II semestre', 2, 7, 'www.ut.uni.it'),
+(202, 12, 'magnam laudantium maxime', 'Eveniet vitae ad aliquam a aut velit. Nihil culpa ab ratione temporibus commodi. Sint totam quisquam officiis deleniti incidunt. In impedit non est.', 'II semestre', 2, 4, NULL),
+(214, 13, 'ratione dolorem debitis', 'Nulla similique voluptas saepe in. Beatae officiis rerum suscipit voluptate perferendis architecto. Non reiciendis omnis esse.', 'I semestre', 2, 12, NULL),
+(215, 13, 'minima fuga corrupti', 'Eos est sit eum omnis. Officiis labore ipsam quia sit. Et modi non sint voluptatem dolores rerum consequatur consequatur. Quo dolorem ipsa aut numquam.', 'I semestre', 2, 9, NULL),
+(216, 13, 'exercitationem nostrum at', 'Repudiandae quaerat dolores harum est. Porro dolor temporibus et. Dolorem voluptate in est ut culpa.', 'I semestre', 2, 14, NULL),
+(217, 13, 'et ea beatae', 'Omnis tempora fuga molestiae impedit. Magnam inventore voluptate aliquam iste natus consequuntur. Aliquam nostrum ea iure ipsam soluta in minus. Voluptatem sit est voluptas architecto cumque.', 'I semestre', 2, 14, 'www.recusandae.uni.it'),
+(218, 13, 'voluptatum soluta sed', 'Velit nostrum facere facilis sapiente impedit. Tempora molestiae numquam et aut doloremque. Amet excepturi modi consequatur autem dolores. Eveniet expedita quae earum debitis error tenetur magnam.', 'II semestre', 2, 5, 'www.odit.uni.it'),
+(219, 13, 'nemo cumque optio', 'Molestiae ex repudiandae veniam dicta. Et suscipit voluptatem rem laudantium quo. Omnis tempora expedita dignissimos explicabo. Esse quas et aut aliquam deserunt ea.', 'II semestre', 2, 3, NULL),
+(220, 13, 'quia rem voluptatum', 'Atque occaecati quo laborum et qui. Eaque et veritatis in illo distinctio. Ut quo excepturi magni rerum eveniet non.', 'II semestre', 2, 4, 'www.eligendi.uni.it'),
+(221, 13, 'quibusdam similique occaecati', 'Assumenda dolores porro iste tempore est nemo. Ea laboriosam corporis sed sed sed expedita blanditiis.', 'II semestre', 2, 10, NULL),
+(228, 14, 'earum iure maxime', 'Recusandae quas quod voluptate qui vel. Temporibus sunt tenetur voluptatem atque expedita id excepturi. Optio veniam esse accusamus nihil quia. Cumque id excepturi omnis facere aut dolor ea.', 'I semestre', 2, 4, NULL),
+(229, 14, 'deserunt delectus eos', 'Ea qui omnis occaecati similique eveniet corrupti. Distinctio quis enim dicta. Voluptatem harum est inventore porro nihil qui. Animi vel eligendi natus.', 'I semestre', 2, 13, 'www.enim.uni.it'),
+(230, 14, 'officiis perspiciatis unde', 'Ut optio cupiditate culpa porro voluptates qui voluptas. Officia vel nemo amet consequuntur harum corporis odio perferendis. Aliquid eius nostrum qui sed velit.', 'I semestre', 2, 6, 'www.quisquam.uni.it'),
+(231, 14, 'illum non accusamus', 'Nisi veritatis quis quo dolor incidunt nisi. Doloremque ullam occaecati sequi vel non deserunt. Commodi atque est soluta nihil vel eum. Numquam rerum sit odit explicabo aut ea.', 'I semestre', 2, 13, NULL),
+(232, 14, 'voluptatem ipsa odit', 'Dolorem commodi reiciendis molestiae sint in. Non aliquid sequi veritatis error. Sit ut optio iste animi omnis exercitationem quo ducimus. Placeat occaecati perferendis sit hic accusamus.', 'II semestre', 2, 12, 'www.quaerat.uni.it'),
+(233, 14, 'aperiam repellat doloremque', 'Voluptatem consequatur alias eum repellendus nisi quia. Praesentium laboriosam sunt laboriosam aut enim deleniti quidem. Id optio doloribus rerum optio nesciunt autem.', 'II semestre', 2, 12, 'www.impedit.uni.it'),
+(234, 14, 'ea impedit sit', 'Eveniet minus aut qui omnis necessitatibus est aliquid. Dolores modi consectetur voluptatem ut recusandae illum exercitationem. Minus dolor qui consectetur qui iste voluptas consequatur.', 'II semestre', 2, 4, 'www.repellat.uni.it'),
+(240, 15, 'vel quasi dolorum', 'Autem tempore repellendus sed quia ducimus voluptatibus inventore. Quia quaerat saepe ea voluptas. Modi explicabo voluptatem et iusto dolorem.', 'I semestre', 2, 10, 'www.omnis.uni.it');
+
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `courses`
+--
+ALTER TABLE `courses`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `courses_degree_id_foreign` (`degree_id`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `courses`
+--
+ALTER TABLE `courses`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1318;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `courses`
+--
+ALTER TABLE `courses`
+  ADD CONSTRAINT `courses_degree_id_foreign` FOREIGN KEY (`degree_id`) REFERENCES `degrees` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

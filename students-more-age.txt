@@ -1,0 +1,228 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Creato il: Mag 29, 2023 alle 16:30
+-- Versione del server: 8.0.33
+-- Versione PHP: 8.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_second_university`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `students`
+--
+
+CREATE TABLE `students` (
+  `id` bigint UNSIGNED NOT NULL,
+  `degree_id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `surname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `fiscal_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `enrolment_date` date NOT NULL,
+  `registration_number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `students`
+--
+
+INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) VALUES
+(56, 10, 'Radames', 'Villa', '1993-10-01', 'ZHOAGL29P79F782W', '2020-05-17', '620088', 'ineri@ferri.com'),
+(92, 16, 'Giacinto', 'Amato', '1993-04-29', 'TSFSCQ90F84B365P', '2020-10-07', '620124', 'dmazza@riva.it'),
+(148, 46, 'Filomena', 'Rizzo', '1993-01-28', 'TXTYUU56D96O261C', '2019-12-02', '620180', 'tosca12@gmail.com'),
+(149, 59, 'Gregorio', 'Ferri', '1993-01-22', 'HBDHEW26R54D799Y', '2019-03-15', '620181', 'ferrari.adriano@ferrari.it'),
+(178, 28, 'Ariel', 'Santoro', '1993-07-04', 'NLVWUX17L18K698V', '2020-12-04', '620210', 'deangelis.tosca@ricci.com'),
+(195, 57, 'Nicoletta', 'Farina', '1993-08-30', 'DIXXGB62T78S525H', '2018-10-28', '620227', 'kayla33@libero.it'),
+(225, 21, 'Sasha', 'Santoro', '1993-03-22', 'RSQFQK12R58Y046F', '2019-02-05', '620257', 'hpellegrino@hotmail.com'),
+(305, 30, 'Cleopatra', 'Basile', '1993-10-18', 'RVNZUN87D18V472B', '2020-06-12', '620337', 'maika.mariani@yahoo.it'),
+(348, 21, 'Ortensia', 'Orlando', '1993-12-03', 'TXJSDS87G65P753P', '2021-04-18', '620380', 'ninfa.galli@longo.com'),
+(452, 9, 'Pericle', 'Palumbo', '1993-08-27', 'MPJMPW54N11G400B', '2019-07-10', '620484', 'erminio.sala@battaglia.com'),
+(459, 20, 'Ivonne', 'Colombo', '1993-09-15', 'VACZJP91O39Y023R', '2019-01-03', '620491', 'dlongo@email.it'),
+(496, 20, 'Egidio', 'Orlando', '1993-05-10', 'FFZOIR19N94K914J', '2019-06-22', '620528', 'wdeluca@palmieri.it'),
+(507, 12, 'Penelope', 'Palmieri', '1993-04-17', 'SLXAVR00E67J420Y', '2019-08-28', '620539', 'sconte@barbieri.com'),
+(517, 3, 'Clea', 'Giuliani', '1993-06-03', 'YWJHRK97X50B087Y', '2020-09-05', '620549', 'violante55@carbone.it'),
+(521, 41, 'Ulrico', 'Marino', '1993-04-03', 'HJNCEO63O17C160A', '2019-12-28', '620553', 'emilia72@costa.com'),
+(533, 75, 'Demis', 'Barone', '1993-10-21', 'XWEVWO22W21B153A', '2020-10-08', '620565', 'battista.ferrari@ricci.net'),
+(538, 16, 'Helga', 'D\'angelo', '1993-06-26', 'RRCGRU19H54Q896A', '2020-04-02', '620570', 'violante19@basile.com'),
+(594, 11, 'Ettore', 'Bellini', '1993-03-01', 'IYGHJS55D28Q857H', '2020-04-08', '620626', 'hbenedetti@serra.org'),
+(653, 37, 'Ortensia', 'Grasso', '1993-11-24', 'RJPDBU10U59L216F', '2018-10-06', '620685', 'guerra.mirco@yahoo.com'),
+(688, 61, 'Clodovea', 'Marini', '1993-02-03', 'CRBIJN68D47W789B', '2020-10-07', '620720', 'eesposito@galli.it'),
+(734, 42, 'Giorgio', 'Battaglia', '1993-01-27', 'MDJLCW80I27X788C', '2021-01-09', '620766', 'sala.cleopatra@email.it'),
+(753, 12, 'Matilde', 'Ferrara', '1993-06-02', 'RXOJZO93U62U181C', '2018-09-29', '620785', 'donati.gianleonardo@hotmail.com'),
+(791, 16, 'Jelena', 'Longo', '1993-05-24', 'KWMHOB60E54R827G', '2019-10-11', '620823', 'costantini.diana@gmail.com'),
+(802, 36, 'Marieva', 'Monti', '1993-02-22', 'VQLTVX22W01G018J', '2020-11-30', '620834', 'sfontana@amato.net'),
+(876, 39, 'Loredana', 'Ferrari', '1993-01-14', 'QUXGRV80K74M276F', '2020-09-22', '620908', 'sarita31@yahoo.it'),
+(897, 5, 'Morgana', 'Martino', '1993-10-10', 'RQKEQZ79V59F648G', '2020-02-14', '620929', 'crusso@libero.it'),
+(903, 54, 'Concetta', 'D\'angelo', '1993-08-21', 'EKSOOK96Q81A407M', '2020-09-10', '620935', 'aaron80@yahoo.it'),
+(1027, 42, 'Monia', 'Conte', '1993-02-10', 'BIQZCL23B15U475D', '2019-03-19', '621059', 'gregorio.caruso@yahoo.it'),
+(1030, 28, 'Renzo', 'Ricci', '1993-10-01', 'MWGNTA29C38I194X', '2020-09-08', '621062', 'kris35@rossetti.it'),
+(1092, 23, 'Lisa', 'Giuliani', '1993-12-07', 'XGWUPQ77U29X192J', '2020-09-03', '621124', 'xbellini@email.it'),
+(1100, 14, 'Laura', 'Leone', '1993-11-27', 'IXZMBP43U90W120J', '2021-05-22', '621132', 'cosetta05@caruso.com'),
+(1138, 21, 'Diana', 'Fabbri', '1993-06-26', 'VVYYZH67E85R158Y', '2021-02-28', '621170', 'ibruno@yahoo.it'),
+(1149, 20, 'Diamante', 'Neri', '1993-08-23', 'CUWVJA82G59F880V', '2020-01-14', '621181', 'luna.lombardo@pellegrino.it'),
+(1182, 33, 'Elsa', 'Caputo', '1993-09-22', 'BIOCOG15X23D182S', '2020-02-18', '621214', 'ubianchi@libero.it'),
+(1193, 70, 'Kayla', 'Marino', '1993-11-15', 'ENRJSC48D39Y808I', '2021-03-17', '621225', 'ferretti.vienna@ferretti.com'),
+(1236, 62, 'Miriana', 'Fiore', '1993-05-08', 'BKDSQA87U85L635Q', '2019-08-15', '621268', 'miriam.neri@dangelo.com'),
+(1244, 32, 'Assia', 'Palmieri', '1993-06-05', 'DYXYDC97D15S754Y', '2021-02-13', '621276', 'sbarone@email.it'),
+(1267, 54, 'Luce', 'Damico', '1993-12-13', 'ZVVYQD57B96K739T', '2019-07-02', '621299', 'sorrentino.sirio@hotmail.com'),
+(1310, 61, 'Maika', 'Donati', '1993-07-08', 'GGEVVZ00Z48B952T', '2020-02-01', '621342', 'luce06@libero.it'),
+(1329, 53, 'Ercole', 'Giuliani', '1993-02-19', 'EWBQOQ78S63F034Q', '2019-01-23', '621361', 'marianita16@guerra.it'),
+(1394, 28, 'Donatella', 'Valentini', '1993-08-17', 'BWVIIU65L75L988B', '2021-02-07', '621426', 'kbarbieri@yahoo.it'),
+(1404, 32, 'Erminia', 'Bernardi', '1993-02-09', 'VIUSYJ94R49B299K', '2021-04-08', '621436', 'gentile.antonino@hotmail.com'),
+(1431, 9, 'Diamante', 'Sorrentino', '1993-01-31', 'HLLWDJ44D78E430K', '2019-03-16', '621463', 'elga82@email.it'),
+(1451, 63, 'Giorgio', 'Orlando', '1993-09-14', 'OAIEHO62W14I461P', '2020-09-02', '621483', 'diana77@basile.it'),
+(1457, 55, 'Doriana', 'Serra', '1993-04-12', 'VNDZXY89Z01R072A', '2018-08-16', '621489', 'egisto.romano@yahoo.it'),
+(1469, 59, 'Carmela', 'Mancini', '1993-09-03', 'PNZQEU57T96K835P', '2020-02-26', '621501', 'lucia.benedetti@fabbri.org'),
+(1551, 18, 'Abramo', 'Bianco', '1993-06-09', 'TQHGJV71W83U792N', '2019-06-22', '621583', 'lazzaro47@gmail.com'),
+(1560, 38, 'Romolo', 'Caruso', '1993-09-05', 'TIOGHO87H91C026P', '2019-07-27', '621592', 'luna.villa@yahoo.it'),
+(1578, 12, 'Edilio', 'Morelli', '1993-03-02', 'KTYLSC40K28C100G', '2018-12-16', '621610', 'ausonio.ricci@yahoo.it'),
+(1611, 46, 'Giancarlo', 'Parisi', '1993-08-15', 'XGLGPR61W53H027S', '2019-02-20', '621643', 'moretti.diana@libero.it'),
+(1623, 30, 'Piccarda', 'Carbone', '1993-06-22', 'GAOOUA15Y15I869Z', '2018-07-08', '621655', 'enrico.caputo@valentini.org'),
+(1643, 25, 'Vitalba', 'Colombo', '1993-07-14', 'ZMROCA81P54J475N', '2019-04-13', '621675', 'sueellen.sanna@gallo.com'),
+(1649, 21, 'Marino', 'Greco', '1993-08-04', 'YTCYAB36R64T409N', '2020-02-06', '621681', 'leone02@yahoo.it'),
+(1737, 16, 'Jelena', 'Bianco', '1993-12-23', 'YXMJQK33C98M993V', '2019-04-09', '621769', 'egidio46@yahoo.com'),
+(1740, 12, 'Diana', 'Vitale', '1993-05-20', 'TSSCWK24K68I551Q', '2020-04-19', '621772', 'cira.villa@gmail.com'),
+(1746, 40, 'Ludovico', 'Cattaneo', '1993-04-04', 'VKTMTC66Z29T846B', '2019-05-03', '621778', 'pmartinelli@hotmail.com'),
+(1760, 61, 'Donatella', 'Rinaldi', '1993-09-28', 'MNWSNB00I64V852H', '2020-01-05', '621792', 'ferdinando.caputo@moretti.org'),
+(1788, 7, 'Leone', 'Russo', '1993-01-01', 'WWMCRV08V44X094B', '2021-05-07', '621820', 'danuta.ferretti@yahoo.it'),
+(1835, 75, 'Giuliano', 'Ferrari', '1993-05-02', 'BBUEGI44O13C381R', '2020-11-08', '621867', 'dgatti@costa.net'),
+(1844, 7, 'Adriano', 'De Angelis', '1993-01-28', 'NYGXBR30E75R354Y', '2020-05-09', '621876', 'hector.ferrari@sartori.com'),
+(2055, 69, 'Morgana', 'Marchetti', '1993-08-16', 'JBYPOA56Y52G639Z', '2018-10-06', '622087', 'omartini@martini.net'),
+(2070, 27, 'Albino', 'Colombo', '1993-02-14', 'ZKURKZ93K16G715O', '2019-11-05', '622102', 'bibiana20@yahoo.it'),
+(2072, 17, 'Ludovico', 'Palmieri', '1993-04-15', 'YBXHGH38P19J590M', '2018-12-20', '622104', 'emidio.caputo@martino.net'),
+(2108, 45, 'Matilde', 'Bianco', '1993-06-02', 'AWQBJH89I48Q730B', '2018-10-16', '622140', 'hgallo@yahoo.it'),
+(2132, 67, 'Ermes', 'Colombo', '1993-07-27', 'EPDHNH20R73J745X', '2019-03-19', '622164', 'ione12@gmail.com'),
+(2174, 5, 'Violante', 'Riva', '1993-10-08', 'BEKYIJ59B52B777Q', '2020-09-02', '622206', 'arizzi@grasso.it'),
+(2199, 61, 'Cristyn', 'Marini', '1993-04-30', 'ZFBION29J98B560U', '2021-05-05', '622231', 'cosetta46@libero.it'),
+(2216, 35, 'Mietta', 'Gentile', '1993-06-23', 'NIIEDP96D30T056P', '2019-02-13', '622248', 'rvitale@pagano.it'),
+(2234, 1, 'Demi', 'Esposito', '1993-09-01', 'JXOTXE15N40K186W', '2019-07-30', '622266', 'osvaldo16@yahoo.it'),
+(2267, 63, 'Gianriccardo', 'Vitali', '1993-07-24', 'PJLGGQ98X45H938W', '2019-11-14', '622299', 'modesto07@yahoo.it'),
+(2270, 45, 'Ione', 'Lombardi', '1993-12-27', 'KRYZYI73G39V946T', '2019-12-22', '622302', 'dsorrentino@lombardi.it'),
+(2366, 50, 'Gianriccardo', 'Conti', '1993-10-17', 'NWPKSO49R83Y192V', '2020-06-02', '622398', 'marina.bellini@lombardi.it'),
+(2483, 43, 'Edipo', 'Ferraro', '1993-12-26', 'UUCDHY96B80R313V', '2018-09-30', '622515', 'lombardi.lidia@desantis.org'),
+(2500, 31, 'Brigitta', 'Damico', '1993-01-11', 'MWNRUU68N48E828Z', '2019-09-14', '622532', 'marchetti.mariagiulia@pellegrini.com'),
+(2537, 63, 'Zelida', 'Barbieri', '1993-06-05', 'PPFTBG02C13W570R', '2019-01-23', '622569', 'naomi.longo@greco.it'),
+(2561, 75, 'Giovanna', 'Coppola', '1993-07-05', 'SUPSDH64Y53G588V', '2018-11-29', '622593', 'sferrari@coppola.com'),
+(2592, 56, 'Cesidia', 'Ricci', '1993-07-31', 'GFQIWB58B91H174N', '2020-08-03', '622624', 'leone38@grassi.it'),
+(2672, 46, 'Concetta', 'Riva', '1993-11-22', 'PGRUEU39X66B581M', '2019-07-17', '622704', 'longo.luigi@yahoo.com'),
+(2719, 63, 'Antonino', 'Ricci', '1993-05-21', 'NLZDHV66D84X121D', '2019-08-19', '622751', 'mgiordano@libero.it'),
+(2733, 50, 'Caligola', 'D\'amico', '1993-04-27', 'AHYGSG08G47F196R', '2018-08-15', '622765', 'kayla.mancini@yahoo.com'),
+(2751, 9, 'Gastone', 'Grassi', '1993-10-03', 'GBLOQT56L01M625U', '2021-04-27', '622783', 'quirino.piras@yahoo.it'),
+(2778, 48, 'Mercedes', 'Testa', '1993-07-18', 'ANQQOP19I33S633K', '2020-12-04', '622810', 'aruggiero@negri.com'),
+(2792, 74, 'Sabino', 'Ruggiero', '1993-07-25', 'DBAVRG79X61H723L', '2018-10-19', '622824', 'ileana56@basile.com'),
+(2794, 39, 'Gianmarco', 'Giordano', '1993-02-24', 'LXLSBU77H22R689F', '2018-08-31', '622826', 'claudia.cattaneo@gmail.com'),
+(2802, 42, 'Olimpia', 'Ferretti', '1993-04-13', 'ZASVJF90I97B727D', '2018-07-26', '622834', 'caruso.armando@martino.com'),
+(2857, 74, 'Ermes', 'Vitali', '1993-05-08', 'RANFHV68T83P638Y', '2018-08-05', '622889', 'hsanna@villa.org'),
+(2871, 3, 'Doriana', 'Fabbri', '1993-05-16', 'THVBWI14S85L451G', '2019-06-22', '622903', 'kai.fontana@email.it'),
+(2903, 74, 'Laura', 'Bernardi', '1993-02-09', 'DLLIXJ06D08U551H', '2018-07-15', '622935', 'ethan.sorrentino@gmail.com'),
+(2943, 75, 'Gelsomina', 'Martini', '1993-09-20', 'MZUFKZ94X92F545D', '2020-01-17', '622975', 'parisi.sarita@fontana.com'),
+(2954, 12, 'Osvaldo', 'Gentile', '1993-10-09', 'LPDEHC50C05W866Q', '2020-01-18', '622986', 'gerlando01@gmail.com'),
+(2973, 64, 'Loretta', 'Costa', '1993-05-29', 'IUJXRS99U07Y492Z', '2020-06-01', '623005', 'naomi88@yahoo.it'),
+(2978, 16, 'Fernando', 'Montanari', '1993-08-25', 'OSWDJR76Q18V061O', '2019-06-27', '623010', 'abramo75@libero.it'),
+(2982, 73, 'Piccarda', 'Benedetti', '1993-08-31', 'BUYANK81O10M930C', '2019-08-29', '623014', 'sala.valdo@marchetti.net'),
+(2984, 49, 'Ulrico', 'Palumbo', '1993-02-07', 'FQSQTQ91Q48P037Z', '2019-03-16', '623016', 'graziano.ferraro@grasso.it'),
+(3062, 3, 'Doriana', 'Sorrentino', '1993-12-10', 'UPORZK90Y42Y609P', '2018-09-14', '623094', 'enzo.bernardi@hotmail.com'),
+(3070, 17, 'Hector', 'Bellini', '1993-04-07', 'RENOLA49N15R917L', '2021-01-06', '623102', 'tosca22@hotmail.com'),
+(3098, 39, 'Lucia', 'Sala', '1993-03-07', 'WQZCBR26D83T627G', '2018-07-30', '623130', 'enzo.derosa@email.it'),
+(3105, 17, 'Lamberto', 'Longo', '1993-10-30', 'OFUCKZ34Z70Y763S', '2018-09-21', '623137', 'piras.helga@fiore.com'),
+(3117, 43, 'Pierfrancesco', 'Farina', '1993-12-16', 'XITEXL18G45N403G', '2020-11-25', '623149', 'ursula.caruso@gmail.com'),
+(3146, 74, 'Matilde', 'Conte', '1993-12-04', 'LAJDPE18X62D826Y', '2020-10-10', '623178', 'sconte@email.it'),
+(3244, 24, 'Pericle', 'Sartori', '1993-06-29', 'ZQOLUJ17G09F001T', '2018-10-28', '623276', 'demi.barbieri@email.it'),
+(3279, 37, 'Audenico', 'Donati', '1993-04-16', 'DEIRHI30K09X207Q', '2021-03-12', '623311', 'mazza.maruska@gmail.com'),
+(3285, 43, 'Mirco', 'Neri', '1993-08-16', 'CPOWPT72E37K578W', '2020-08-25', '623317', 'guendalina.carbone@email.it'),
+(3294, 68, 'Ettore', 'Marini', '1993-01-23', 'ZFLVET75Y97T357J', '2019-12-23', '623326', 'marieva.ferri@gmail.com'),
+(3295, 72, 'Timothy', 'Pellegrino', '1993-12-27', 'PHPIHP13N60C495L', '2019-03-26', '623327', 'pellegrini.cosetta@email.it'),
+(3430, 64, 'Zaccaria', 'Donati', '1993-04-19', 'CCHSKQ87J08L421B', '2020-02-07', '623462', 'fabbri.deborah@gmail.com'),
+(3494, 42, 'Liborio', 'De Santis', '1993-01-29', 'TOHFFH76H56W892H', '2021-04-18', '623526', 'artes.deangelis@mancini.com'),
+(3499, 51, 'Rufo', 'Costa', '1993-05-31', 'RNRFVN50P00K549C', '2019-05-11', '623531', 'ethan.negri@carbone.org'),
+(3514, 75, 'Ermes', 'Negri', '1993-12-17', 'PLHYUJ60T28H649C', '2019-08-30', '623546', 'sarita.negri@deluca.org'),
+(3531, 52, 'Artemide', 'Pellegrino', '1993-02-20', 'OIIKKR56K73T282H', '2020-08-26', '623563', 'jguerra@hotmail.com'),
+(3636, 61, 'Ivano', 'Rossetti', '1993-06-01', 'BTAWQP11A60Q508K', '2019-01-22', '623668', 'ybenedetti@ruggiero.it'),
+(3647, 41, 'Enrica', 'Marchetti', '1993-01-27', 'LIJLKR11L48E558B', '2019-06-03', '623679', 'tmarino@ricci.it'),
+(3669, 54, 'Matteo', 'Donati', '1993-12-26', 'FJYFLM59T22P765P', '2018-09-29', '623701', 'giacinta28@sartori.it'),
+(3704, 5, 'Lia', 'Colombo', '1993-07-09', 'UHZQGU42T25Q325A', '2019-01-18', '623736', 'kristel99@yahoo.it'),
+(3793, 1, 'Rosalino', 'Vitali', '1993-07-20', 'OBNACP02T78I725B', '2019-06-23', '623825', 'bibiana.damico@yahoo.it'),
+(3812, 46, 'Sue ellen', 'Sartori', '1993-10-04', 'YJQAOI83K17H040N', '2020-03-29', '623844', 'hector05@negri.com'),
+(3939, 44, 'Hector', 'Martini', '1993-08-17', 'TWAEZW70B61J824O', '2019-06-16', '623971', 'ferri.evita@libero.it'),
+(3959, 10, 'Rosaria', 'Conti', '1993-06-27', 'CCWXEX30F59A388O', '2020-11-27', '623991', 'carbone.ingrid@gmail.com'),
+(3961, 36, 'Antimo', 'Villa', '1993-05-22', 'PWTNEE16P13V890Y', '2019-08-10', '623993', 'lsorrentino@yahoo.com'),
+(4005, 35, 'Joannes', 'Villa', '1993-07-26', 'ZNCVSO58F06T545T', '2018-11-26', '624037', 'orfeo.fiore@monti.it'),
+(4029, 18, 'Lia', 'Valentini', '1993-11-11', 'QZLZOS40L23T173K', '2019-11-03', '624061', 'fvalentini@desantis.it'),
+(4147, 3, 'Jari', 'Longo', '1993-09-30', 'CBAYHQ22R54M794F', '2018-09-25', '624179', 'benedetti.miriana@martini.it'),
+(4173, 16, 'Giordano', 'Coppola', '1993-01-22', 'ONMGTO85C45E292P', '2019-12-23', '624205', 'rita.sartori@cattaneo.com'),
+(4187, 10, 'Maruska', 'Bernardi', '1993-01-16', 'KWYRLA24K30R115U', '2019-03-12', '624219', 'lamberto69@martini.net'),
+(4289, 65, 'Eliziario', 'Palumbo', '1993-01-24', 'MPVZMA28K38U797U', '2019-03-26', '624321', 'nathan.coppola@deluca.com'),
+(4325, 69, 'Rita', 'Pellegrino', '1993-09-19', 'JLPOGQ16S25C332U', '2019-06-04', '624357', 'xferrara@email.it'),
+(4327, 25, 'Edipo', 'Giuliani', '1993-06-15', 'FEYGDO07L62A602C', '2021-02-11', '624359', 'cesidia.monti@yahoo.com'),
+(4402, 18, 'Emidio', 'Montanari', '1993-09-22', 'CUOPJC40B00S143H', '2018-12-16', '624434', 'zgallo@libero.it'),
+(4435, 10, 'Naomi', 'Caputo', '1993-12-20', 'ZVDNWU74Y50T220Y', '2021-02-16', '624467', 'ruggiero.miriam@ferri.com'),
+(4510, 73, 'Maruska', 'Rossi', '1993-10-29', 'XUYZTZ68V08K956V', '2020-08-20', '624542', 'giovanna65@email.it'),
+(4516, 8, 'Cleopatra', 'Mancini', '1993-08-21', 'IVELRM08M96O093I', '2021-05-17', '624548', 'eesposito@romano.it'),
+(4537, 52, 'Nicoletta', 'Pellegrino', '1993-07-01', 'QXJOEC83P76S431O', '2020-08-10', '624569', 'jesposito@donati.com'),
+(4554, 44, 'Albino', 'Colombo', '1993-09-28', 'AXNEGY29T06N695A', '2020-06-03', '624586', 'isira80@piras.com'),
+(4580, 32, 'Priamo', 'Ferrari', '1993-05-03', 'EVQECL19Y39R064I', '2020-12-15', '624612', 'conte.cirino@email.it'),
+(4623, 60, 'Folco', 'Mariani', '1993-12-02', 'HXPUWH81K13C708G', '2020-05-03', '624655', 'lucrezia.ruggiero@gentile.com'),
+(4673, 42, 'Ariel', 'Marino', '1993-05-14', 'ZVKQWG96U08C676O', '2019-08-11', '624705', 'jpellegrini@yahoo.it'),
+(4675, 17, 'Marzio', 'Gentile', '1993-12-03', 'VNHOWO31C20Y289Z', '2020-05-17', '624707', 'iferraro@caputo.com'),
+(4696, 63, 'Anastasio', 'Monti', '1993-12-25', 'BYYWUC69Z87R387M', '2019-09-17', '624728', 'rlombardo@libero.it'),
+(4717, 2, 'Silverio', 'Martini', '1993-03-28', 'SUOLVY00O52V582V', '2019-04-09', '624749', 'romano.dante@email.it'),
+(4727, 32, 'Elsa', 'Fontana', '1993-11-08', 'TRMXDE91K71V022B', '2020-12-21', '624759', 'luigi.damico@neri.org'),
+(4792, 26, 'Thea', 'Piras', '1993-07-15', 'NENAYD35N30W527M', '2018-11-22', '624824', 'nfarina@hotmail.com'),
+(4844, 38, 'Piccarda', 'Ferri', '1993-04-11', 'XWQYFI81W75K277R', '2020-05-14', '624876', 'mmoretti@gmail.com'),
+(4847, 56, 'Penelope', 'Monti', '1993-05-30', 'WCQTOI98R23G321X', '2018-07-30', '624879', 'iacopo.basile@martino.com'),
+(4975, 8, 'Marcella', 'Parisi', '1993-02-20', 'FPOUTW88F14E051E', '2020-09-29', '625007', 'ubruno@yahoo.com'),
+(4991, 5, 'Davis', 'Moretti', '1993-10-28', 'BDDOYU36P34D977N', '2020-03-14', '625023', 'albino.russo@martino.it');
+
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `students_email_unique` (`email`),
+  ADD KEY `students_degree_id_foreign` (`degree_id`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `students`
+--
+ALTER TABLE `students`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5001;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_degree_id_foreign` FOREIGN KEY (`degree_id`) REFERENCES `degrees` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

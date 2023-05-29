@@ -1,0 +1,107 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Creato il: Mag 29, 2023 alle 16:09
+-- Versione del server: 8.0.33
+-- Versione PHP: 8.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_second_university`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `students`
+--
+
+CREATE TABLE `students` (
+  `id` bigint UNSIGNED NOT NULL,
+  `degree_id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `surname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `fiscal_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `enrolment_date` date NOT NULL,
+  `registration_number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `students`
+--
+
+INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) VALUES
+(4, 55, 'Alan', 'Bianchi', '1991-02-09', 'PPTBJS10M72R784W', '2018-11-28', '620036', 'nbianchi@grasso.org'),
+(5, 18, 'Miriana', 'Conte', '1995-12-19', 'QHSHDB60C81O520M', '2019-05-31', '620037', 'hmonti@yahoo.com'),
+(6, 70, 'Patrizio', 'Greco', '1992-11-15', 'RHYNRD88R06H626Y', '2018-12-05', '620038', 'donati.evangelista@yahoo.com'),
+(7, 47, 'Manfredi', 'Mazza', '1995-07-15', 'DKEYPV17Q01I787U', '2019-04-08', '620039', 'pellegrini.luna@deangelis.net'),
+(8, 44, 'Rudy', 'Vitali', '1991-02-17', 'VYYHLN80U40E018F', '2020-09-17', '620040', 'zconte@marino.it'),
+(9, 55, 'Eriberto', 'Silvestri', '1992-12-13', 'LNBEVJ09S67R509E', '2021-06-07', '620041', 'maika.piras@gmail.com'),
+(14, 40, 'Marieva', 'Pellegrino', '1992-03-16', 'KZXTXV35S98R279X', '2019-12-27', '620046', 'primo.marchetti@gmail.com'),
+(19, 30, 'Kociss', 'Caputo', '1997-11-14', 'OAPDVP63P60H590Y', '2021-05-30', '620051', 'secondo05@yahoo.it'),
+(22, 46, 'Ian', 'Farina', '1992-07-15', 'XWHJYE72N37M133A', '2021-03-02', '620054', 'valentini.vera@libero.it'),
+(24, 70, 'Eriberto', 'Morelli', '2001-01-08', 'ZGJLMB14T77J767V', '2020-01-28', '620056', 'romano.nestore@conte.com'),
+(26, 29, 'Elio', 'Messina', '1995-08-05', 'DMCIKD77G00Y665Z', '2020-10-16', '620058', 'onegri@costantini.net'),
+(30, 67, 'Gastone', 'Costa', '1996-07-11', 'BIEEGE15J57P460H', '2020-10-13', '620062', 'besposito@caputo.it'),
+(33, 33, 'Iacopo', 'Greco', '2000-01-23', 'JECAZU29U94X231C', '2019-06-17', '620065', 'fortunata10@rizzo.it'),
+(36, 36, 'Marco', 'Palmieri', '1997-07-29', 'OKSMMT35X63T499K', '2019-10-23', '620068', 'evita26@caputo.it'),
+(39, 70, 'Fiorentino', 'Vitale', '1998-06-09', 'IABIZY88Y37G643Q', '2018-12-21', '620071', 'martini.sarita@testa.com'),
+(45, 20, 'Grazia', 'Grasso', '1997-11-29', 'BOGZOU43X32C939Z', '2018-12-20', '620077', 'yferri@email.it'),
+(48, 68, 'Morgana', 'Sala', '1998-05-21', 'YXZGNW91Y68I700X', '2019-09-30', '620080', 'lucia.pellegrino@gmail.com'),
+(50, 30, 'Samira', 'Mancini', '1999-02-22', 'WDTPKP61N13Y605K', '2019-12-29', '620082', 'upiras@yahoo.com'),
+(51, 45, 'Ursula', 'Pagano', '1997-07-01', 'QOYLZK92X83I382V', '2020-03-01', '620083', 'nfiore@martinelli.com'),
+(52, 38, 'Rosita', 'Pellegrino', '1994-12-20', 'TGDGNX56A45B073T', '2021-04-05', '620084', 'fontana.patrizio@email.it'),
+(53, 51, 'Gavino', 'Greco', '1996-06-11', 'ZJOGRI80M27M159X', '2019-03-11', '620085', 'villa.alessandro@amato.com'),
+(54, 38, 'Ippolito', 'Riva', '1995-04-17', 'GFNWUT21L07V256Q', '2020-10-04', '620086', 'danny.sorrentino@bianchi.it'),
+(55, 4, 'Lauro', 'Vitale', '1990-01-30', 'BWOQAH56L35A201P', '2018-10-22', '620087', 'baldassarre.mancini@dangelo.com'),
+(56, 10, 'Radames', 'Villa', '1993-10-01', 'ZHOAGL29P79F782W', '2020-05-17', '620088', 'ineri@ferri.com'),
+
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `students_email_unique` (`email`),
+  ADD KEY `students_degree_id_foreign` (`degree_id`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `students`
+--
+ALTER TABLE `students`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5001;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_degree_id_foreign` FOREIGN KEY (`degree_id`) REFERENCES `degrees` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

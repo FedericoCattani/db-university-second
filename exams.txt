@@ -1,0 +1,179 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Creato il: Mag 29, 2023 alle 16:42
+-- Versione del server: 8.0.33
+-- Versione PHP: 8.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_second_university`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `exams`
+--
+
+CREATE TABLE `exams` (
+  `id` bigint UNSIGNED NOT NULL,
+  `course_id` bigint UNSIGNED NOT NULL,
+  `date` date NOT NULL,
+  `hour` time NOT NULL,
+  `location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `exams`
+--
+
+INSERT INTO `exams` (`id`, `course_id`, `date`, `hour`, `location`, `address`) VALUES
+(11, 3, '2020-01-18', '14:00:00', 'Appartamento 58', 'Contrada Elda 759 Piano 1'),
+(14, 3, '2020-07-07', '14:00:00', 'Appartamento 28', 'Rotonda Galli 85 Appartamento 25'),
+(17, 4, '2020-02-07', '14:40:00', 'Appartamento 58', 'Rotonda Miriana 362 Appartamento 72'),
+(20, 4, '2020-09-04', '14:20:00', 'Piano 2', 'Rotonda Fortunata 9'),
+(33, 7, '2020-06-13', '14:40:00', 'Appartamento 85', 'Rotonda Giuliani 32 Appartamento 25'),
+(38, 8, '2020-06-10', '14:30:00', 'Piano 4', 'Rotonda Marchetti 4'),
+(42, 9, '2020-02-07', '14:00:00', 'Piano 8', 'Strada Morelli 553'),
+(48, 10, '2020-06-20', '14:15:00', 'Piano 2', 'Rotonda Loredana 103 Piano 3'),
+(49, 10, '2020-07-18', '14:15:00', 'Piano 0', 'Via Farina 966'),
+(56, 12, '2020-01-10', '14:20:00', 'Piano 4', 'Contrada Dindo 89'),
+(66, 14, '2020-01-11', '14:40:00', 'Appartamento 00', 'Incrocio Enrico 8'),
+(73, 15, '2020-06-19', '14:20:00', 'Piano 9', 'Rotonda Fiore 93'),
+(81, 17, '2020-01-19', '14:45:00', 'Piano 7', 'Contrada Ivonne 96 Appartamento 53'),
+(86, 18, '2020-01-23', '14:20:00', 'Piano 1', 'Incrocio Palmieri 7 Appartamento 42'),
+(93, 19, '2020-06-11', '14:20:00', 'Appartamento 39', 'Incrocio Pagano 691'),
+(104, 21, '2020-07-08', '14:00:00', 'Appartamento 31', 'Incrocio Penelope 52'),
+(105, 21, '2020-09-15', '14:00:00', 'Appartamento 53', 'Contrada Joshua 97 Appartamento 32'),
+(112, 23, '2020-02-03', '14:30:00', 'Piano 2', 'Incrocio Costanzo 342 Appartamento 83'),
+(114, 23, '2020-07-06', '14:45:00', 'Appartamento 12', 'Borgo Ricci 78 Piano 5'),
+(117, 24, '2020-02-04', '14:15:00', 'Piano 1', 'Contrada Cattaneo 95 Appartamento 28'),
+(124, 25, '2020-07-10', '14:45:00', 'Appartamento 65', 'Rotonda Costa 3'),
+(125, 25, '2020-09-05', '14:20:00', 'Piano 7', 'Via Oreste 35'),
+(138, 28, '2020-06-27', '14:40:00', 'Piano 5', 'Incrocio Serse 4'),
+(152, 31, '2020-02-07', '14:30:00', 'Appartamento 68', 'Borgo Sandro 2'),
+(153, 31, '2020-06-17', '14:40:00', 'Piano 6', 'Contrada Marchetti 91 Piano 4'),
+(154, 31, '2020-07-14', '14:40:00', 'Piano 3', 'Contrada Piras 585 Appartamento 81'),
+(159, 32, '2020-07-19', '14:20:00', 'Appartamento 29', 'Strada Demi 252'),
+(163, 33, '2020-06-16', '14:20:00', 'Appartamento 32', 'Strada Giacinto 17'),
+(167, 34, '2020-02-10', '14:20:00', 'Piano 3', 'Piazza Giuliani 748'),
+(168, 34, '2020-06-25', '14:20:00', 'Piano 7', 'Piazza Palumbo 3'),
+(173, 35, '2020-06-17', '14:15:00', 'Appartamento 94', 'Contrada Martini 98 Appartamento 11'),
+(185, 37, '2020-09-20', '14:45:00', 'Piano 1', 'Strada Elga 510 Piano 1'),
+(188, 38, '2020-06-19', '14:45:00', 'Piano 4', 'Piazza Giordano 549'),
+(191, 39, '2020-01-10', '14:15:00', 'Appartamento 89', 'Rotonda Mietta 24'),
+(201, 41, '2020-01-25', '14:20:00', 'Appartamento 00', 'Via Ileana 924'),
+(204, 41, '2020-07-04', '14:00:00', 'Piano 4', 'Rotonda Ingrid 87'),
+(207, 42, '2020-02-07', '14:20:00', 'Piano 4', 'Rotonda Bianchi 7 Appartamento 05'),
+(222, 45, '2020-02-10', '14:00:00', 'Appartamento 51', 'Via Sasha 1 Appartamento 15'),
+(238, 48, '2020-06-22', '14:45:00', 'Appartamento 37', 'Piazza Augusto 7 Piano 4'),
+(242, 49, '2020-02-04', '14:30:00', 'Piano 2', 'Contrada Silvestri 67 Piano 5'),
+(253, 51, '2020-06-24', '14:15:00', 'Appartamento 66', 'Contrada Lombardi 79 Appartamento 89'),
+(262, 53, '2020-02-05', '14:40:00', 'Appartamento 31', 'Piazza Marino 8'),
+(263, 53, '2020-06-23', '14:15:00', 'Appartamento 50', 'Via Gianmarco 275'),
+(266, 54, '2020-01-25', '14:20:00', 'Appartamento 96', 'Rotonda Pellegrini 254'),
+(279, 56, '2020-07-19', '14:30:00', 'Appartamento 82', 'Piazza Luce 1'),
+(295, 59, '2020-09-15', '14:40:00', 'Appartamento 15', 'Piazza Gentile 7 Piano 8'),
+(298, 60, '2020-06-27', '14:15:00', 'Appartamento 27', 'Strada Orlando 871 Piano 2'),
+(308, 62, '2020-06-27', '14:40:00', 'Appartamento 36', 'Contrada Teseo 269'),
+(323, 65, '2020-06-16', '14:40:00', 'Appartamento 44', 'Incrocio Rinaldi 357'),
+(325, 65, '2020-09-22', '14:15:00', 'Piano 2', 'Via Gregorio 2 Appartamento 82'),
+(329, 66, '2020-07-13', '14:20:00', 'Appartamento 53', 'Piazza Dylan 7 Piano 0'),
+(334, 67, '2020-07-08', '14:20:00', 'Piano 1', 'Borgo Rita 343 Piano 6'),
+(335, 67, '2020-09-09', '14:20:00', 'Appartamento 97', 'Strada Pellegrino 7'),
+(354, 71, '2020-07-07', '14:30:00', 'Appartamento 22', 'Borgo Vitale 89 Appartamento 71'),
+(360, 72, '2020-09-15', '14:20:00', 'Appartamento 28', 'Rotonda Eusebio 8 Piano 8'),
+(368, 74, '2020-06-20', '14:20:00', 'Appartamento 94', 'Strada Pellegrini 53'),
+(372, 75, '2020-02-07', '14:20:00', 'Appartamento 92', 'Rotonda Rizzo 9'),
+(375, 75, '2020-09-10', '14:15:00', 'Piano 6', 'Borgo Joannes 854'),
+(380, 76, '2020-09-04', '14:00:00', 'Appartamento 21', 'Borgo Colombo 20'),
+(386, 78, '2020-01-25', '14:00:00', 'Piano 6', 'Contrada Costantini 46'),
+(388, 78, '2020-06-11', '14:30:00', 'Appartamento 58', 'Contrada Pericle 31'),
+(403, 81, '2020-06-13', '14:45:00', 'Appartamento 23', 'Rotonda Damico 17 Piano 6'),
+(405, 81, '2020-09-14', '14:15:00', 'Appartamento 81', 'Borgo Russo 62 Appartamento 07'),
+(414, 83, '2020-07-16', '14:15:00', 'Piano 1', 'Incrocio Mercedes 66 Piano 4'),
+(441, 89, '2020-01-19', '14:15:00', 'Appartamento 10', 'Contrada Ursula 65'),
+(449, 90, '2020-07-13', '14:00:00', 'Piano 6', 'Via Marcella 6 Appartamento 03'),
+(458, 92, '2020-06-19', '14:15:00', 'Piano 4', 'Piazza De Santis 11'),
+(459, 92, '2020-07-11', '14:20:00', 'Appartamento 49', 'Borgo Pellegrino 724 Appartamento 01'),
+(460, 92, '2020-09-04', '14:20:00', 'Piano 7', 'Via Ferrara 658'),
+(468, 94, '2020-06-12', '14:15:00', 'Piano 0', 'Contrada Rosaria 6'),
+(469, 94, '2020-07-17', '14:20:00', 'Appartamento 54', 'Rotonda Lombardi 20 Piano 0'),
+(472, 95, '2020-02-02', '14:30:00', 'Appartamento 73', 'Rotonda Sarita 1'),
+(484, 97, '2020-07-13', '14:20:00', 'Appartamento 78', 'Contrada Ricci 52'),
+(487, 98, '2020-02-09', '14:00:00', 'Appartamento 96', 'Borgo Irene 2 Appartamento 33'),
+(496, 100, '2020-01-12', '14:30:00', 'Appartamento 03', 'Contrada Jole 70 Appartamento 36'),
+(504, 101, '2020-07-06', '14:00:00', 'Piano 0', 'Piazza Piras 49 Piano 2'),
+(540, 108, '2020-09-25', '14:00:00', 'Piano 8', 'Rotonda Quasimodo 88 Appartamento 37'),
+(550, 110, '2020-09-04', '14:45:00', 'Appartamento 79', 'Contrada Parisi 7 Piano 4'),
+(559, 112, '2020-07-09', '14:00:00', 'Appartamento 83', 'Strada Villa 551'),
+(578, 116, '2020-06-26', '14:30:00', 'Appartamento 73', 'Rotonda Giobbe 94'),
+(589, 118, '2020-07-20', '14:45:00', 'Appartamento 24', 'Borgo Carbone 213 Piano 3'),
+(590, 118, '2020-09-14', '14:30:00', 'Appartamento 11', 'Contrada D\'angelo 532'),
+(593, 119, '2020-06-22', '14:40:00', 'Appartamento 77', 'Strada Kristel 99 Piano 1'),
+(604, 121, '2020-07-08', '14:40:00', 'Piano 9', 'Piazza Gentile 712 Piano 9'),
+(610, 122, '2020-09-08', '14:00:00', 'Appartamento 50', 'Incrocio Bianco 4 Piano 1'),
+(623, 125, '2020-06-15', '14:20:00', 'Appartamento 90', 'Incrocio Noemi 811'),
+(634, 127, '2020-07-13', '14:00:00', 'Piano 1', 'Incrocio Donatella 3'),
+(635, 127, '2020-09-22', '14:15:00', 'Piano 7', 'Borgo Sandro 525 Piano 1'),
+(641, 129, '2020-01-18', '14:20:00', 'Piano 8', 'Contrada Costa 2 Piano 6'),
+(651, 131, '2020-01-19', '14:20:00', 'Piano 2', 'Via Flaviana 141 Piano 8'),
+(659, 132, '2020-07-18', '14:20:00', 'Appartamento 27', 'Contrada Montanari 2'),
+(660, 132, '2020-09-23', '14:15:00', 'Appartamento 47', 'Rotonda Benedetti 188 Piano 2'),
+(674, 135, '2020-07-19', '14:20:00', 'Piano 2', 'Via Ferrara 5 Appartamento 26'),
+(681, 137, '2020-01-28', '14:30:00', 'Appartamento 96', 'Via Deborah 542'),
+(683, 137, '2020-06-26', '14:20:00', 'Appartamento 32', 'Rotonda Nazzareno 392'),
+(684, 137, '2020-07-12', '14:00:00', 'Piano 6', 'Via Dante 909'),
+(700, 140, '2020-09-21', '14:45:00', 'Piano 9', 'Borgo Fiore 8'),
+(715, 143, '2020-09-20', '14:30:00', 'Appartamento 34', 'Via Kristel 56 Piano 6'),
+(724, 145, '2020-07-04', '14:40:00', 'Appartamento 51', 'Borgo Pellegrini 6 Appartamento 64'),
+(726, 146, '2020-01-14', '14:30:00', 'Appartamento 12', 'Piazza Helga 635');
+
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `exams`
+--
+ALTER TABLE `exams`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `exams_course_id_foreign` (`course_id`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `exams`
+--
+ALTER TABLE `exams`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6586;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `exams`
+--
+ALTER TABLE `exams`
+  ADD CONSTRAINT `exams_course_id_foreign` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

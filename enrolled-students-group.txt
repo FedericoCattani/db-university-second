@@ -1,0 +1,183 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Creato il: Mag 29, 2023 alle 17:11
+-- Versione del server: 8.0.33
+-- Versione PHP: 8.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_second_university`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `students`
+--
+
+CREATE TABLE `students` (
+  `id` bigint UNSIGNED NOT NULL,
+  `degree_id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `surname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `fiscal_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `enrolment_date` date NOT NULL,
+  `registration_number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `students`
+--
+
+INSERT INTO `students` (`enrolled-students`, `YEAR(``enrolment_date``)`) VALUES
+(4, 2019),
+(2, 2018),
+(5, 2020),
+(6, 2018),
+(9, 2019),
+(9, 2018),
+(5, 2019),
+(5, 2020),
+(6, 2021),
+(7, 2019),
+(7, 2020),
+(3, 2020),
+(2, 2020),
+(2, 2019),
+(5, 2018),
+(6, 2020),
+(4, 2021),
+(10, 2019),
+(7, 2021),
+(4, 2021),
+(4, 2019),
+(8, 2021),
+(4, 2020),
+(7, 2020),
+(6, 2019),
+(6, 2020),
+(6, 2020),
+(5, 2019),
+(6, 2018),
+(10, 2020),
+(5, 2020),
+(8, 2021),
+(5, 2019),
+(4, 2021),
+(6, 2018),
+(4, 2019),
+(6, 2019),
+(4, 2021),
+(6, 2018),
+(4, 2020),
+(5, 2020),
+(2, 2019),
+(5, 2018),
+(3, 2019),
+(3, 2018),
+(10, 2020),
+(9, 2019),
+(4, 2019),
+(5, 2021),
+(4, 2019),
+(6, 2020),
+(6, 2021),
+(4, 2019),
+(8, 2020),
+(3, 2018),
+(7, 2020),
+(4, 2019),
+(4, 2018),
+(4, 2019),
+(5, 2020),
+(7, 2021),
+(6, 2020),
+(9, 2019),
+(3, 2019),
+(9, 2020),
+(3, 2021),
+(6, 2021),
+(7, 2019),
+(5, 2019),
+(3, 2020),
+(3, 2019),
+(6, 2021),
+(6, 2021),
+(4, 2021),
+(2, 2019),
+(3, 2019),
+(2, 2020),
+(5, 2019),
+(5, 2019),
+(7, 2020),
+(8, 2019),
+(4, 2019),
+(8, 2021),
+(4, 2021),
+(2, 2019),
+(5, 2021),
+(4, 2020),
+(5, 2021),
+(2, 2020),
+(9, 2020),
+(7, 2021),
+(5, 2020),
+(3, 2019),
+(8, 2020),
+(6, 2020),
+(5, 2020),
+(5, 2019),
+(7, 2020),
+(5, 2019),
+(8, 2020);
+
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `students_email_unique` (`email`),
+  ADD KEY `students_degree_id_foreign` (`degree_id`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `students`
+--
+ALTER TABLE `students`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5001;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_degree_id_foreign` FOREIGN KEY (`degree_id`) REFERENCES `degrees` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
